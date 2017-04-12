@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clickable="true"
+    tools:context="com.daily.cloudmusic.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+             >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+            <Button
+                android:layout_width="50dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/actionbar_music_normal"
+                android:layout_toLeftOf="@+id/button2"
+                />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="50dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/actionbar_discover_normal"
+                android:layout_centerInParent="true"/>
+
+            <Button
+                android:layout_width="50dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/actionbar_friends_normal"
+                android:layout_toRightOf="@+id/button2"
+                />
+
+                <Button
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:background="@drawable/actionbar_search"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+</android.support.design.widget.CoordinatorLayout>
