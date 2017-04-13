@@ -8,16 +8,20 @@
     android:clickable="true"
     tools:context="com.daily.cloudmusic.MainActivity">
 
-    <android.support.design.widget.AppBarLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:layout_height="wrap_content"
+            android:background="@color/colorRed"
+
              >
 
             <RelativeLayout
@@ -25,28 +29,31 @@
                 android:layout_height="wrap_content"
                 android:gravity="center">
 
-            <Button
+            <ImageButton
+                android:id="@+id/actionbar_img_btn_music"
                 android:layout_width="50dip"
                 android:layout_height="wrap_content"
                 android:background="@drawable/actionbar_music_normal"
-                android:layout_toLeftOf="@+id/button2"
+                android:layout_toLeftOf="@+id/actionbar_img_btn_discover"
                 />
 
-            <Button
-                android:id="@+id/button2"
+            <ImageButton
+                android:id="@+id/actionbar_img_btn_discover"
                 android:layout_width="50dip"
                 android:layout_height="wrap_content"
                 android:background="@drawable/actionbar_discover_normal"
                 android:layout_centerInParent="true"/>
 
-            <Button
+            <ImageButton
+                android:id="@+id/actionbar_img_btn_friends"
                 android:layout_width="50dip"
                 android:layout_height="wrap_content"
                 android:background="@drawable/actionbar_friends_normal"
-                android:layout_toRightOf="@+id/button2"
+                android:layout_toRightOf="@+id/actionbar_img_btn_discover"
                 />
 
-                <Button
+                <ImageButton
+                    android:id="@+id/actionbar_img_btn_search"
                     android:layout_width="25dip"
                     android:layout_height="25dip"
                     android:background="@drawable/actionbar_search"
@@ -59,8 +66,9 @@
 
 
 
-    </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+    <include layout="@layout/content_main"  />
+
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>
