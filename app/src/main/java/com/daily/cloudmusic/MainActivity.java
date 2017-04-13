@@ -67,6 +67,10 @@ public class MainActivity extends AppCompatActivity
          atcionBarFriendsImgBtn= (ImageButton) findViewById(R.id.actionbar_img_btn_friends);
          atcionBarSearchImgBtn= (ImageButton) findViewById(R.id.actionbar_img_btn_search);
 
+        atcionBarMusicImgBtn.setOnClickListener(new MyOnClickListener(0));
+        atcionBarDiscoverImgBtn.setOnClickListener(new MyOnClickListener(1));
+        atcionBarFriendsImgBtn.setOnClickListener(new MyOnClickListener(2));
+
 
         atcionBarMusicImgBtn.setBackgroundResource(R.drawable.actionbar_music_selected);
         mDatas =new ArrayList<Fragment>();
@@ -135,6 +139,57 @@ public class MainActivity extends AppCompatActivity
     public void onPageSelected(int position) {
         switch (position){
             case 0:
+                selectFragmentState(0);
+                break;
+            case 1:
+                selectFragmentState(1);
+                break;
+            case 2:
+                selectFragmentState(2);
+            break;
+        }
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+
+    }
+
+    public  class MyOnClickListener implements View.OnClickListener{
+
+        private int index = 0;
+
+        public MyOnClickListener(int i) {
+            index = i;
+        }
+
+        @Override
+        public void onClick(View view) {
+            mViewPager.setCurrentItem(index);
+        }
+    }
+
+//    @Override
+//    public void onClick(View view) {
+//        switch (view.getId()){
+//            case R.id.actionbar_img_btn_music:
+//                selectFragmentState(0);
+//                onPageSelected(0);
+//                break;
+//            case R.id.actionbar_img_btn_discover:
+//                selectFragmentState(1);
+//                onPageSelected(1);
+//                break;
+//            case R.id.actionbar_img_btn_friends:
+//                selectFragmentState(2);
+//                onPageSelected(2);
+//                break;
+//        }
+//    }
+
+     private  void  selectFragmentState(int state){
+        switch (state){
+            case 0:
                 atcionBarMusicImgBtn.setBackgroundResource(R.drawable.actionbar_music_selected);
                 atcionBarDiscoverImgBtn .setBackgroundResource(R.drawable.actionbar_discover_normal);
                 atcionBarFriendsImgBtn.setBackgroundResource(R.drawable.actionbar_friends_normal);
@@ -151,11 +206,8 @@ public class MainActivity extends AppCompatActivity
                 atcionBarDiscoverImgBtn .setBackgroundResource(R.drawable.actionbar_discover_normal);
                 atcionBarFriendsImgBtn.setBackgroundResource(R.drawable.actionbar_friends_selected);
                 break;
+
         }
     }
 
-    @Override
-    public void onPageScrollStateChanged(int state) {
-
-    }
 }

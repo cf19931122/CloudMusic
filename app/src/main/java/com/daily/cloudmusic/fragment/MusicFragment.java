@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import com.daily.cloudmusic.R;
 
 /**
- * Created by Administrator on 2017/4/13.
+ * Created by daily on 2017/4/13.
  */
 
 public class MusicFragment extends Fragment {

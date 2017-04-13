@@ -10,7 +10,10 @@ import android.view.ViewGroup;
 import com.daily.cloudmusic.R;
 
 /**
- * Created by Administrator on 2017/4/13.
+ * Created by daily on 2017/4/13.
+ * 包括“个性推荐”，“歌单”，“主播电台”，“排行榜”
+ * 主要实现Fragment内添加viewpager
+ * 使用RecyclerView流
  */
 
 public class DiscoverFragment extends Fragment {
